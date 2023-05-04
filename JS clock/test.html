@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="testo.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+        <title>Test JS</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="temps" id="demo" onload="currentTime()"></div>
+        </div>
+        <script>
+            function currentTime() {
+                let date = new Date();
+                let hours = date.getHours();
+                let min = date.getMinutes();
+                let sec = date.getSeconds();
+
+                let time = hours + ":" + min + ":" + sec + "";
+
+                document.getElementById("demo").innerText = time;
+                var update = setTimeout(function(){currentTime()}, 1000);
+            }
+                currentTime();
+        </script>
+
+
+
+    </body>
+</html>
